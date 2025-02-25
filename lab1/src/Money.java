@@ -1,4 +1,4 @@
-public class Money implements ShowMoney, SetMoney {
+public class Money implements ShowData, SetMoney {
 
     private final String carrencyName;
     private int wholePart;
@@ -10,7 +10,7 @@ public class Money implements ShowMoney, SetMoney {
     }
 
     @Override
-    public void showMoney() {
+    public void show() {
         System.out.printf("Summa = %d.%02d %s ", wholePart, fractionalPart, carrencyName);
     }
     @Override

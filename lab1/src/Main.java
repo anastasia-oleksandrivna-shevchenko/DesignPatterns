@@ -8,23 +8,23 @@ public class Main {
         Money money1 = new Money("USD", 100, 50);
         Money money2 = new Money("USD", 50, 75);
 
-        money1.showMoney();
-        money2.showMoney();
+        money1.show();
+        money2.show();
 
         System.out.println("\nAfter changing price:");
         money1.setMoney(120, 25);
-        money1.showMoney();
+        money1.show();
 
         Product bread = new Product("Bread", 10, 39, "loaves");
         Product potato = new Product("Potato", 15, 6, "kg");
 
         System.out.println("\nBefore reducing price:");
-        bread.displayProduct();
-        potato.displayProduct();
+        bread.show();
+        potato.show();
 
         bread.redusePrice(10.00);
         System.out.println("\nAfter reducing price:");
-        bread.displayProduct();
+        bread.show();
 
 
         Warehouse warehouse = new Warehouse(LocalDate.of(2025, 2, 11));
@@ -32,14 +32,14 @@ public class Main {
         warehouse.addProduct(potato, 100);
 
         System.out.println("\nProducts in Warehouse:");
-        warehouse.displayProducts();
+        warehouse.show();
 
         // Оновлення кількості товару в складі
         warehouse.updateQuantity(bread, 30);
         warehouse.updateQuantity(potato, -20);
 
         System.out.println("\nProducts in Warehouse After Update:");
-        warehouse.displayProducts();
+        warehouse.show();
 
         Reporting reporting = new Reporting(warehouse);
 

@@ -1,4 +1,4 @@
-public class Product implements RedusePrice, ShowProduct {
+public class Product implements RedusePrice, ShowData {
     private final String name;
     private Money price;
     private final String unitOfMeasure;
@@ -26,7 +26,7 @@ public class Product implements RedusePrice, ShowProduct {
         this.price.setMoney(newWholePart, newFractionalPart);
     }
     @Override
-    public void displayProduct()
+    public void show()
     {
         System.out.println("Product Name: " + name);
         System.out.println("Product Price: " + price);

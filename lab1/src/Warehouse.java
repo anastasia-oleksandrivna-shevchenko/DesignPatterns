@@ -2,7 +2,7 @@ import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Warehouse implements AddProducts, UpdateQuantity, DisplayProducts {
+public class Warehouse implements AddProducts, UpdateQuantity, ShowData {
     private Map<Product, Integer> products;
     private LocalDate lastArrivalDate;
 
@@ -28,7 +28,7 @@ public class Warehouse implements AddProducts, UpdateQuantity, DisplayProducts {
         }
     }
     @Override
-    public void displayProducts() {
+    public void show() {
         for (Map.Entry<Product, Integer> entry : products.entrySet()) {
             Product product = entry.getKey();
             int quantity = entry.getValue();
